@@ -23,6 +23,7 @@ Test om denne metoden funker på Norske navn:
 Med amerikans treningsdata klarer metoden 
 - Kvinner: 68 av 100 (av 100 vanligste norske)
 - Menn: 85 av 100 (av 100 vanligste norske)
+
 Trening & test:
 - 32031 male names loaded, 56347 female names loaded
 - Accuracy: 0.807932
