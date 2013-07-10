@@ -78,7 +78,7 @@ class genderPredictor():
        return classify.accuracy(self.classifier,test_set)
         
     def getMostInformativeFeatures(self,n=5):
-        #print self.classifier.show_most_informative_features()
+        print self.classifier.show_most_informative_features()
         return self.classifier.most_informative_features(n)
         
     def _loadNames(self):
@@ -90,7 +90,7 @@ class genderPredictor():
         return {
             'last_letter': name[-1],
             'last_two' : name[-2:],
-            'last_is_vowel' : (name[-1] in 'AEIOUY')
+            'last_is_vowel' : (name[-1] in u'AEIOUYÆØÅ') # slutter noen navn på ÆØÅ i det heletatt? (øker accuracy til 0.82, men senker mini-testen for herrer med 7 prosentpoeng og øker damer med 2 prosentpoeng)           
         }
 
 
