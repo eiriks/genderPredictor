@@ -2,8 +2,11 @@
 # encoding: utf-8
 """
 Hvis jeg skal lage en loop-up tabell trenker jeg fornavn på menn og kvinner og bruke look-up på de som KUN brukes på et av kjønnene.
+Funker pr nu kun som bokstav for bokstav-loopkup (eirik != Eirik & Kim-are != Kim-Are)
 
-Trenger å håndtere CAP og Camel-case bedre, og kanskje dobbeltnavn?
+- Trenger å håndtere CAPs og Camel-case bedre
+- dobbeltnavn
+
 
 Returnerer pr nå tupler med inputnavn og kjønn
 
@@ -76,5 +79,5 @@ if __name__ == '__main__':
     
     print names.get_gender("Anne-Britt")
     print names.get_gender("Anne Marie")
-    print names.get_gender("May-britt")    # bussig med listen b?
+    print names.get_gender("May-britt")    # pussig med listen b?
     print names.get_gender("Siri-Kathrine")           
