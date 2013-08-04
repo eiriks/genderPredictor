@@ -1,0 +1,4 @@
+h2. Norske fornavn og etternavn
+
+Dette er en samling av alle norske fornavn og etternavn som er brukt av 200 personer eller flere.
+Disse er ment å bruke til å lage testdata.
