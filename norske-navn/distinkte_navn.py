@@ -22,26 +22,23 @@ class noNamesLookup:
     ''' class to lookup gender from First names in Norwegian'''
 
     def __init__(self):
-        self.jente_liste = []
-        self.gutte_liste = []
-        # jenter = last_jenter()
-        # gutter = last_gutter()
-        # begge = self.intersect(jenter, gutter) # [u'Inge\n', u'Kim\n', u'Tonny\n', u'Thanh\n', u'Marian\n'] ?? Har sjekket, det stemmer...
         self.jenter = self.last_jenter()
         self.gutter = self.last_gutter()
         self.begge = self.intersect(self.jenter, self.gutter)
 
     def intersect(self, a, b):
-         return list(set(a) & set(b))
+         return list(set(a) & set(b))   # [u'Inge\n', u'Kim\n', u'Tonny\n', u'Thanh\n', u'Marian\n'] ?? Har sjekket, det stemmer...
 
     def last_jenter(self):
         jenter = open("jentenavn.txt", 'U') #.read()
+        self.jente_liste = []
         for j in jenter:
             self.jente_liste.append(j.decode("utf8").rstrip())
         return self.jente_liste
 
     def last_gutter(self):
         gutter = open("guttenavn.txt", "U")
+        self.gutte_liste = []
         for g in gutter:
             self.gutte_liste.append(g.decode("utf8").rstrip())
         return self.gutte_liste
@@ -56,7 +53,6 @@ class noNamesLookup:
             return (name, u"man")
         else:
             return (name, u"ikke funnet, kjør AI eller flipp en mynt")
-
     
 if __name__ == '__main__':
     names = noNamesLookup()
